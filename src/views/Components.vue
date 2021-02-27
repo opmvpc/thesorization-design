@@ -1,5 +1,5 @@
 <template>
-  <div class="components">
+  <div class="container px-3 sm:px-0 sm:mx-auto components">
     <h1>Form</h1>
     <section>
       <h2>text input</h2>

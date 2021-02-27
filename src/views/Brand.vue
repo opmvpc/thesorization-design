@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container px-3 sm:px-0 sm:mx-auto">
       <h1>Identité</h1>
       <section>
         <h2>Fonts</h2>

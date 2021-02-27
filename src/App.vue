@@ -1,6 +1,6 @@
 <template>
-  <div class="container px-3 sm:px-0 sm:mx-auto">
-    <div id="nav" class="w-auto flex flex-col md:flex-row md:justify-between md:items-center text-xl text-indigo-900 font-bold py-5">
+  <div class="">
+    <div id="nav" class="container px-3 sm:px-0 sm:mx-auto flex flex-col md:flex-row md:justify-between md:items-center text-xl text-indigo-900 font-bold py-5">
       <div class="inline-flex justify-between items-center">
         <span id="logo" class="text-3xl">
           Thesorization design

@@ -1,3 +1,4 @@
+const { white } = require("tailwindcss/colors");
 const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
@@ -14,10 +15,12 @@ module.exports = {
       current: "currentColor",
       gray: colors.blueGray,
       red: colors.red,
-      blue: colors.lightBlue,
+      blue: colors.blue,
       yellow: colors.amber,
       indigo: colors.indigo,
-      teal: colors.teal
+      teal: colors.teal,
+      black: colors.black,
+      white: colors.white
     },
     extend: {
       fontFamily: {
