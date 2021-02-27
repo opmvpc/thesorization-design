@@ -6,6 +6,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
+      primary: colors.indigo,
+      secondary: colors.teal,
+      warning: colors.yellow,
+      danger: colors.red,
       transparent: "transparent",
       current: "currentColor",
       gray: colors.blueGray,
@@ -13,16 +17,16 @@ module.exports = {
       blue: colors.lightBlue,
       yellow: colors.amber,
       indigo: colors.indigo,
-      teal: colors.teal,
+      teal: colors.teal
     },
     extend: {
       fontFamily: {
-        inter: ["Inter var", ...defaultTheme.fontFamily.sans],
-      },
-    },
+        inter: ["Inter var", ...defaultTheme.fontFamily.sans]
+      }
+    }
   },
   variants: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 };
