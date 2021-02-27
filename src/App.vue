@@ -21,7 +21,7 @@
         <router-link to="/pages">Pages</router-link>
       </ul>
     </div>
-    <router-view/>
+    <router-view class="mt-10"/>
   </div>
 </template>
 

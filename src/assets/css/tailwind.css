@@ -3,3 +3,36 @@
 @tailwind components;
 
 @tailwind utilities;
+
+section {
+  @apply mb-10 p-4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-indigo-900 font-bold;
+}
+
+h1 {
+  @apply text-3xl bg-indigo-50 px-4 py-2 rounded border-b-2 border-indigo-400 shadow mb-4;
+}
+
+h2 {
+  @apply inline-block text-2xl bg-indigo-50 px-4 py-1 rounded border-b-2 border-indigo-400 shadow mb-4;
+}
+
+h3 {
+  @apply text-xl;
+}
+
+h4 {
+  @apply text-lg;
+}
+
+h5 {
+  @apply text-base;
+}
