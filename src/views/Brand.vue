@@ -77,27 +77,27 @@
         <div class="flex justify-between">
           <div class="flex flex-col items-center">
             <h2>Primaire</h2>
-            <div class="h-32 w-32 bg-indigo-400 rounded-full shadow-lg mb-2">
+            <div class="h-32 w-32 bg-primary-400 rounded-full shadow-lg mb-2">
             </div>
-            <div class="text-center">.bg-indigo-400</div>
+            <div class="text-center">.bg-primary-400</div>
           </div>
           <div class="flex flex-col items-center">
             <h2>Secondaire</h2>
-            <div class="h-32 w-32 bg-teal-400 rounded-full shadow-lg mb-2">
+            <div class="h-32 w-32 bg-secondary-400 rounded-full shadow-lg mb-2">
             </div>
-            <div class="text-center">.bg-teal-400</div>
+            <div class="text-center">.bg-secondary-400</div>
           </div>
           <div class="flex flex-col items-center">
             <h2>Warning</h2>
-            <div class="h-32 w-32 bg-yellow-400 rounded-full shadow-lg mb-2">
+            <div class="h-32 w-32 bg-warning-400 rounded-full shadow-lg mb-2">
             </div>
-            <div class="text-center">.bg-yellow-400</div>
+            <div class="text-center">.bg-warning-400</div>
           </div>
           <div class="flex flex-col items-center">
             <h2>Danger</h2>
-            <div class="h-32 w-32 bg-red-400 rounded-full shadow-lg mb-2">
+            <div class="h-32 w-32 bg-danger-400 rounded-full shadow-lg mb-2">
             </div>
-            <div class="text-center">.bg-red-400</div>
+            <div class="text-center">.bg-danger-400</div>
           </div>
         </div>
       </section>
