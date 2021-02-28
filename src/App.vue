@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="shadow">
-      <div id="nav" class="container px-3 sm:mx-auto flex flex-col md:flex-row md:justify-between md:items-center text-xl text-app-900 font-bold h-20">
+      <div id="nav" class="container px-3 sm:mx-auto flex flex-col md:flex-row md:justify-between md:items-center text-xl text-app-900 font-bold py-4 md:py-0">
         <div class="inline-flex justify-between items-center">
           <span class="text-3xl font-mono">
             Thesorization design
@@ -11,9 +11,9 @@
           </button>
         </div>
         <ul class="hidden md:inline-flex h-full">
-          <router-link to="/">Brand</router-link>
-          <router-link to="/components">Components</router-link>
-          <router-link to="/pages">Pages</router-link>
+          <router-link to="/" class="py-4">Brand</router-link>
+          <router-link to="/components" class="py-4">Components</router-link>
+          <router-link to="/pages" class="py-4">Pages</router-link>
         </ul>
         <!-- responsive menu -->
         <ul v-show="menuIsOpen" class="md:hidden inline-flex flex-col mt-4 bg-gray-50 py-4 rounded-lg">
