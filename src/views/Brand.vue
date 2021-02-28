@@ -6,7 +6,7 @@
         <section>
           <h2>Fonts</h2>
           <div>
-            <p class="text-rose-900 mb-4">
+            <p class="text-app-900 mb-4">
               <span class="text-xl font-bold">
                 Inter font:
               </span>
