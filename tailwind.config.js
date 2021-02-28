@@ -7,6 +7,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
+      app: colors.teal,
       primary: colors.indigo,
       secondary: colors.teal,
       warning: colors.yellow,
@@ -19,6 +20,8 @@ module.exports = {
       yellow: colors.amber,
       indigo: colors.indigo,
       teal: colors.teal,
+      lime: colors.lime,
+      rose: colors.rose,
       black: colors.black,
       white: colors.white
     },
