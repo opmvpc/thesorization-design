@@ -36,11 +36,9 @@ export default {
   mounted() {
     this.$nextTick(function() {
       this.titles = document.querySelectorAll('h1, h2');
-      console.log(this.titles);
       for (let index = 0; index < this.titles.length; index++) {
         const title = this.titles[index];
         title.id = this.slugify(title.textContent);
-        console.log(title.tagName);
       }
     });
   }
