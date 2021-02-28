@@ -1,12 +1,12 @@
 <template>
-<div class="relative h-full">
+<div class="relative md:static h-full">
 
   <button id="menu-button" @click="isOpen = !isOpen" class="m-3 visible md:invisible absolute bottom-0 left-0 z-20 bg-gray-100 p-2 rounded-full focus:outline-none focus:text-primary-500 focus:ring focus:ring-primary-500 transition" :class="{'ml-67' : isOpen}">
     <svg v-show="!isOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
     <svg v-show="isOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
   </button>
 
-  <div :class="{'invisible': !isOpen}" v-click-away="onClickAway" class="md:visible sidebar h-full w-64 bg-blue-800 absolute flex flex-col">
+  <div :class="{'invisible': !isOpen}" v-click-away="onClickAway" class="absolute md:static md:visible sidebar h-full w-64 bg-blue-800 flex flex-col">
     <div class="h-16 text-gray-100 flex items-center pl-4 font-bold text-xl font-mono border-b border-blue-900">
       Thesorization
     </div>
