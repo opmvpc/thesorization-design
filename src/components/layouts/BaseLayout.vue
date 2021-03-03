@@ -4,21 +4,19 @@
     <div class="w-full flex flex-col">
       <nav-bar></nav-bar>
       <div class="content">
-
+        <slot></slot>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import NavBar from './NavBar.vue'
-import SideBar from './SideBar.vue'
+import NavBar from "./NavBar.vue";
+import SideBar from "./SideBar.vue";
 export default {
   components: { SideBar, NavBar },
   name: "BaseLayout"
-}
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -41,10 +41,10 @@
     <div
       :class="{ invisible: !isOpen }"
       v-click-away="onClickAway"
-      class="absolute md:static md:visible sidebar h-full w-64 bg-blue-800 flex flex-col"
+      class="absolute md:static md:visible sidebar h-full w-64 bg-primary-800 flex flex-col"
     >
       <div
-        class="h-16 text-gray-100 flex items-center pl-4 font-bold text-xl font-mono border-b border-blue-900"
+        class="h-16 text-gray-100 flex items-center pl-4 font-bold text-xl font-mono border-b border-primary-900"
       >
         Thesorization
       </div>
@@ -153,7 +153,7 @@
           </ul>
         </div>
       </div>
-      <div class="links-group border-t border-blue-900 py-2">
+      <div class="links-group border-t border-primary-900 py-2">
         <ul class="">
           <a href="#">
             <svg
@@ -228,22 +228,22 @@ export default {
 }
 
 .sidebar .links-group ul > a.active {
-  @apply inline-flex items-center ml-2 mr-4 px-2 bg-blue-900 rounded-lg transition;
+  @apply inline-flex items-center ml-2 mr-4 px-2 bg-primary-900 rounded-lg transition;
 }
 
 .sidebar .links-group ul > a:hover {
-  @apply inline-flex items-center ml-2 mr-4 px-2 bg-blue-700 rounded-lg transition text-gray-50;
+  @apply inline-flex items-center ml-2 mr-4 px-2 bg-primary-700 rounded-lg transition text-gray-50;
 }
 
 .sidebar .links-group ul > a > svg {
-  @apply w-6 h-6 text-blue-400 mr-2;
+  @apply w-6 h-6 text-primary-400 mr-2;
 }
 
 .sidebar .links-group ul > a.active > svg {
-  @apply text-blue-300;
+  @apply text-primary-300;
 }
 
 .sidebar .links-group ul > a:hover > svg {
-  @apply text-blue-200;
+  @apply text-primary-200;
 }
 </style>
