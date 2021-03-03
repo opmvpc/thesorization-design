@@ -1,6 +1,6 @@
 <template>
   <button
-    class="bg-transparent hover:bg-indigo-200 text-indigo-800 font-semibold hover:text-white py-2 px-4 border border-indigo-300 hover:border-transparent rounded"
+    class="shadow bg-secondary-50 hover:bg-secondary-100 hover:shadow-md text-secondary-500 hover:text-secondary-600 font-bold py-2 px-4 rounded-lg transition focus:outline-none focus:ring ring-secondary-400"
   >
     <slot></slot>
   </button>
