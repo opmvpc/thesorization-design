@@ -61,6 +61,8 @@
             </select>
           </label>
         </div>
+        <h2>SubjectSelect</h2>
+        <subject-select></subject-select>
       </section>
       <h1>Boutons</h1>
       <section>
@@ -115,6 +117,7 @@ import ButtonSecondary from "../components/buttons/ButtonSecondary";
 import ButtonTernary from "../components/buttons/ButtonTernary";
 import InputText from "../components/inputs/InputText";
 import InputPassword from "../components/inputs/InputPassword";
+import SubjectSelect from "../components/selections/SubjectSelect";
 import Toc from "../components/Toc.vue";
 
 export default {
@@ -125,7 +128,10 @@ export default {
     ButtonTernary,
     InputText,
     InputPassword,
+    SubjectSelect,
     Toc
   }
 };
 </script>
+
+SubjectSelect
