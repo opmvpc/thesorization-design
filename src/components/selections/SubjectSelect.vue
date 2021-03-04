@@ -64,7 +64,6 @@
         :list="subjectList"
         :group="{ name: 'subject', pull: true, put: true }"
         :clone="clone"
-        @removed="onEnd"
         @change="log"
         itemKey="id"
       >
