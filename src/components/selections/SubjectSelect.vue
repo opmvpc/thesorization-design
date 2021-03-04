@@ -1,7 +1,7 @@
 <template>
   <div v-show="alertSubjectSelect" role="alert">
     <div
-      class="border border-red-400 rounded-b bg-red-100 px-4 py-1 m-4 text-red-700"
+      class="border  border-danger-400 rounded-b bg-danger-100 px-4 py-1 m-4 text-danger-700 items-center"
     >
       <p>You can select only a maximum of 5 subjects.</p>
       <div class="m-2 p-2">
@@ -15,7 +15,7 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 ">
+  <div class="grid grid-cols-1 md:grid-cols-4">
     <div class="text-center bg-gray-50 text-gray-800 p-4 m-2 rounded">
       <h3 class="text-gray-800">Selected</h3>
       <p>Drag your selection order here</p>
@@ -56,11 +56,11 @@
       <button-primary class="p-10 m-5">Submit</button-primary>
     </div>
     <div
-      class="text-center text-gray-800 bg-gray-50 m-2 p-4 rounded col-span-2"
+      class="text-center text-gray-800 bg-gray-50 m-2 p-4 rounded col-span-3"
     >
       <h3 class="text-primary-600">Available Subject</h3>
       <draggable
-        class="list-group"
+        class="list-group  h-72 overflow-scroll"
         :list="subjectList"
         :group="{ name: 'subject', pull: true, put: true }"
         :clone="clone"
@@ -69,7 +69,7 @@
       >
         <template #item="{ element}">
           <div
-            class="list-group-item bg-primary-100 m-2 p-2 rounded-md text-center"
+            class="list-group-item bg-primary-100 m-2 p-2 rounded-md text-center "
           >
             <div class="flex justify-between" v-on:click="toggle(element)">
               <p class="font-inter text-base">
