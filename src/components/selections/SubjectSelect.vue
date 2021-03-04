@@ -1,45 +1,6 @@
 <template>
   <div class="grid grid-cols-1 md:grid-cols-3 ">
-    <div
-      class="text-center text-primary-1000 bg-primary-800 m-2 rounded col-span-2"
-    >
-      <h3 class="text-gray-200">Available Subject</h3>
-      <draggable
-        class="list-group"
-        :list="subjectList"
-        :group="{ name: 'subject', pull: true, put: true }"
-        :clone="clone"
-        @change="log"
-        itemKey="id"
-      >
-        <template #item="{ element}">
-          <div
-            class="list-group-item bg-secondary-400 m-1 p-3 rounded-md text-center"
-          >
-            <div class="flex justify-between">
-              <p class="font-inter text-base">
-                {{ element.title }}
-              </p>
-
-              <div class="title" v-on:click="toggle(element)">
-                <span v-if="!element.active">{{ expandIcon }}</span>
-                <span v-else>{{ collapseIcon }}</span>
-              </div>
-            </div>
-            <div class="body" v-show="element.active">
-              <p class="font-inter text-xs">
-                {{ element.details }}
-              </p>
-              <p class="text-left font-inter text-xs">
-                Tutor : {{ element.tutor }}
-              </p>
-            </div>
-          </div>
-        </template>
-      </draggable>
-    </div>
-
-    <div class="text-center text-bg-primary-800 bg-secondary-400 m-2 rounded">
+    <div class="text-center text-gray-800 bg-secondary-400 m-2 rounded">
       <h3>Selected</h3>
       <p>Drag your selection here</p>
       <draggable
@@ -51,7 +12,7 @@
       >
         <template #item="{ element, index}">
           <div
-            class="list-group-item bg-primary-300 m-1 p-1 rounded-md text-center"
+            class="list-group-item text-gray-200 bg-primary-600 m-1 p-1 rounded-md text-center"
           >
             <div class="flex flex-shrink justify-between">
               <p class="font-inter text-base">
@@ -77,6 +38,40 @@
       </draggable>
 
       <button-primary>Submit</button-primary>
+    </div>
+    <div
+      class="text-center text-primary-1000 bg-primary-800 m-2 rounded col-span-2"
+    >
+      <h3 class="text-gray-200">Available Subject</h3>
+      <draggable
+        class="list-group"
+        :list="subjectList"
+        :group="{ name: 'subject', pull: true, put: true }"
+        :clone="clone"
+        @removed="onEnd"
+        @change="log"
+        itemKey="id"
+      >
+        <template #item="{ element}">
+          <div
+            class="list-group-item bg-secondary-400 m-1 p-3 rounded-md text-center"
+          >
+            <div class="flex justify-between" v-on:click="toggle(element)">
+              <p class="font-inter text-base">
+                {{ element.title }}
+              </p>
+            </div>
+            <div class="body" v-show="element.active">
+              <p class="font-inter text-xs">
+                {{ element.details }}
+              </p>
+              <p class="text-left font-inter text-xs">
+                Tutor : {{ element.tutor }}
+              </p>
+            </div>
+          </div>
+        </template>
+      </draggable>
     </div>
   </div>
 </template>
@@ -174,12 +169,30 @@ export default {
   },
   methods: {
     clone: function(el) {
-      if (this.selectedSubjectList.length < 5) {
+      if (
+        this.selectedSubjectList.length < 5 &&
+        !this.selectedSubjectList.filter(e => e.id === el.id).length > 0
+      ) {
         return el;
+      } else {
+        console.log("subjectList : ", this.subjectList);
+        console.log("selected :", this.selectedSubjectList);
       }
     },
     log: function(evt) {
-      window.console.log(evt);
+      window.console.log("evt", evt);
+      if (evt.removed) {
+        // if element is not in any list push it back to subjectList
+        if (
+          !this.selectedSubjectList.filter(e => e.id === evt.removed.element.id)
+            .length > 0 &&
+          !this.subjectList.filter(e => e.id === evt.removed.element.id)
+            .length > 0
+        ) {
+          this.subjectList.push(evt.removed.element);
+          alert("You can select maximum 5 subject");
+        }
+      }
     },
     toggle(el) {
       el.active = !el.active;
