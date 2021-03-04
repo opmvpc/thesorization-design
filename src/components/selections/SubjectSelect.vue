@@ -1,7 +1,7 @@
 <template>
   <div v-show="alertSubjectSelect" role="alert">
     <div
-      class="border border-red-400 rounded-b bg-red-100 px-4 py-1 m-4 text-red-700"
+      class="border border-danger-400 rounded-b bg-danger-100 px-4 py-1 m-4 text-danger-700"
     >
       <p>You can select only a maximum of 5 subjects.</p>
       <div class="m-2 p-2">
